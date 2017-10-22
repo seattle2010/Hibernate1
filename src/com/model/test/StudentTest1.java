@@ -40,9 +40,10 @@ public class StudentTest1 {
 
 			Student student = new Student();
 			student.setName("tom");
-			student.setAge(18);
+			student.setAge(38);
 			session.save(student);
 			tx.commit();
+			session.close();
 		}
 
 	//查找

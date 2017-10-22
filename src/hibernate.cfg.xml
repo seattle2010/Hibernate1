@@ -26,10 +26,16 @@
 			update：如果没有表结构，创建表结构。如果存在，不会创建，添加数据
 		-->
 		<property name="hibernate.hbm2ddl.auto">update</property>
-		
+
+
+		<!--为了在service里加上事务,这里需要开启本地session-->
+		<property name="hibernate.current_session_context_class">thread</property>
 		<!-- 映射配置文件，需要引入映射的配置文件 -->
-		<mapping resource="com/model/entity/TStudent.hbm.xml"/>
-		
+		<mapping resource="com/model/entity/Student.hbm.xml"/>
+
+		<!--分层例子的配置-->
+		<mapping resource="localThread/dao/User.hbm.xml"/>
+
 	</session-factory>
 	
 </hibernate-configuration>	
