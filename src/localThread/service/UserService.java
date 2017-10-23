@@ -34,7 +34,7 @@ try{
 	tx.commit();
 }catch(Exception e){
     e.printStackTrace();
-    //出现问题回滚
+
     tx.rollback();
 }
 	}
